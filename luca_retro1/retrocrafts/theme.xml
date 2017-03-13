@@ -2,8 +2,8 @@
    <title>RetroCrafts</title> <!-- your theme's name -->
    <parent>Magento/blank/Luca</parent> <!-- the parent theme -->
    <media>
-        <preview_image>media/index_priview.jpg</preview_image> <!-- theme's preview image -->
+        <preview_image>media/index_preview.jpg</preview_image> <!-- theme's preview image -->
    </media>
 </theme>
 
-<!--Child-tema RetroCrafts som skriver över Luca som skriver över blank--->
+<!--Titel-filen RetroCrafts som berättar vilket/a teman som är parent. Preview-bild av indexsidan finns inlagd här -->
