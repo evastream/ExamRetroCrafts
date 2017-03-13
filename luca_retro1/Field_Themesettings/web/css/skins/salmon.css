@@ -1,0 +1,74 @@
+/*
+Default:
+ background-color: #F0486B;
+ color: #fff;
+
+Hover:
+  background-color: #333;
+  color: #F0486B;
+
+Link Hover:
+color: #F0486B;
+
+Button Hover: #F0486B;
+
+*/
+.product-info-main .product-addto-links a:hover, .minicart-wrapper .action.showcart:hover::before, 
+.minicart-wrapper .action.showcart.active::before, .header-content .header-links-options a:hover, 
+.minicart-wrapper .actions a:hover, .product-reviews-summary .reviews-actions a:hover, 
+.field-megamenu .dropdown-menu a:hover
+{
+	color: #F0486B!important;
+}
+.columns a:hover, .columns .alink:hover, .breadcrumbs .item strong, 
+.product-info-main .add-action:hover,
+.product-info-main .price-box .price-including-tax + .price-excluding-tax .price, 
+.product-options-bottom .price-box .price-including-tax + .price-excluding-tax .price, 
+.product-info-main .price-box .weee + .price-excluding-tax .price, 
+.product-options-bottom .price-box .weee + .price-excluding-tax .price, 
+.product-info-main .price-box .weee .price, 
+.product-options-bottom .price-box .weee .price, .field-menu .field-vertical li.level0:hover > a
+{
+	color: #F0486B;
+}
+
+.scrollup, .block.newsletter .action.subscribe:hover,
+.product-block .product-image .product-item-actions .actions-secondary .add-to-wishlist:hover, 
+.product-block .product-image .product-item-actions .actions-secondary .add-to-compare:hover, 
+.product-block .product-image .product-item-actions .actions-secondary .quick-view:hover, 
+.product-block .product-image .product-item-actions .actions-secondary .add-to-wishlist:focus, 
+.product-block .product-image .product-item-actions .actions-secondary .add-to-compare:focus, 
+.product-block .product-image .product-item-actions .actions-secondary .quick-view:focus,
+.product-block .product-image .product-item-actions .actions-primary .add-to-cart
+{
+	background-color: #F0486B;
+}
+
+._keyfocus *:focus, input:focus:not([disabled]), textarea:focus:not([disabled]), select:focus:not([disabled]){
+	box-shadow: 0 0 3px 1px #F0486B;
+}
+
+.action.primary:hover, .action.primary:active, .action.primary:focus {
+    background: #F0486B;
+    border-color: #F0486B;
+    color: #fff;
+}
+
+.widget-carousel .owl-nav .owl-prev, .productlist-widget .owl-nav::before, .widget-carousel .owl-nav .owl-next,.field-menutop .field-megamenu li.level0:hover > a{
+	background: #F0486B!important;
+}
+.productlist-widget ul.etabs li a, .footer-top .block .block-title strong{
+	color:  #F0486B;
+}
+.owl-carousel .owl-nav [class*=owl-]{
+	color:  #F0486B;
+}
+.field-menutop .field-megamenu{
+	border-top-color: #F0486B!important;
+}
+.widget-images .image-item a:before{
+	border-color: #F0486B!important;
+}
+textarea, input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"]{
+	border-color: #F0486B;
+}

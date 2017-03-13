@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="empty"/>
+    <referenceContainer name="page.wrapper">
+        <container name="header.container" as="header_container" label="Page Header Container"  htmlTag="div" htmlClass="page-header" before="-" />
+
+        <container name="field-slideshow" as="field-slideshow" label="Page Slideshow Container" htmlTag="div" htmlClass="field-slideshow page-main clearfix" before="main.content"/>
+
+        <container name="field-showcase" as="field-showcase" label="Page Showcase Container" htmlTag="div" htmlClass="field-showcase page-main clearfix" after="field-slideshow"/>
+
+        <container name="field-masstop" as="field-masstop" label="Page Masstop Container" htmlTag="div" htmlClass="field-masstop page-main clearfix" after="field-showcase"/>
+
+        <container name="field-massbottom" as="field-massbottom" label="Page Massbottom Container" htmlTag="div" htmlClass="field-massbottom page-main clearfix" after="field-masstop"/>
+
+        <container name="field-massbottom1" as="field-massbottom1" label="Page Massbottom1 Container" htmlTag="div" htmlClass="field-massbottom1 page-main clearfix" after="field-massbottom"/>
+
+        <container name="field-massbottom2" as="field-massbottom2" label="Page Massbottom2 Container" htmlTag="div" htmlClass="field-massbottom2 page-main clearfix" after="field-massbottom1"/>
+
+        <container name="footer-container" as="footer" before="before.body.end" label="Page Footer Container" htmlTag="div" htmlClass="page-footer" />
+    </referenceContainer>
+</layout>

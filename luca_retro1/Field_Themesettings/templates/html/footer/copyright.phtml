@@ -1,0 +1,20 @@
+<?php
+$field = $this->helper("Field\Themesettings\Helper\Theme");
+$data = $this->helper("Field\Themesettings\Helper\Data");
+$enable_coppyright = $field->getFooterCfg("general_settings/enable_coppyright");
+$enable_custom_coppyright = $field->getFooterCfg("general_settings/enable_custom_coppyright");
+$custom_coppyright = $data->filter($field->getFooterCfg("general_settings/custom_coppyright"));
+
+?>
+<?php if($enable_coppyright){ ?>
+<div class="copyright">
+ <?php if($enable_custom_coppyright){ ?>
+ <?php echo $custom_coppyright; ?>
+ <?php }else{ ?> 
+ <div class="page-main">
+	    <div class="pull-left"><span><?php /* @escapeNotVerified */ echo $block->getCopyright() ?></span></div>
+	    <div class="pull-right"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('icon_pay')->toHtml();?></div>
+ </div>
+ <?php } ?>    
+</div>
+<?php } ?>

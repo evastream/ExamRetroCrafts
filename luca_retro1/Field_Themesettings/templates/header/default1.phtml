@@ -1,0 +1,149 @@
+<?php
+$field = $this->helper('Field\Themesettings\Helper\Theme');
+$sticky = $field->getHeaderCfg("sticky_settings/sticky");
+$sticky_type = $field->getHeaderCfg("sticky_settings/sticky_type");
+$logo = $field->getHeaderCfg("sticky_settings/logo");
+$menu = $field->getHeaderCfg("sticky_settings/menu");
+$search = $field->getHeaderCfg("sticky_settings/search");
+$custom_block = $field->getHeaderCfg("sticky_settings/custom_block");
+$topcart = $field->getHeaderCfg("sticky_settings/topcart");
+$topbar = $field->getHeaderCfg("sticky_settings/topbar");
+$enable_toplinks = $field->getHeaderCfg("toplinks_settings/enable");
+$show_search = $field->getHeaderCfg("search_settings/search");
+$show_topbar = $field->getHeaderCfg("topbar/show_topbar");
+
+if($sticky_type == 'all'){
+	$logo = $menu = $search = $topcart = $toplinks = $topbar= true;	
+}
+?>
+<div id="field-header" class="header2">
+	<!-- Top bar -->
+	<?php if($show_topbar): ?>
+	<div class="panel wrapper page-topbar clearfix <?php echo $topbar?"sticky-item":"sticky-item-hidden"  ?>">
+		<div class="field-inner page-main">
+
+			<?php echo $this->getChildHtml('skip_to_content') ?>
+
+			<?php if($currency_block = $this->getChildHtml('currency')): ?>
+			<div class="switcher-currency-wrapper hidden-sm hidden-xs">
+				<?php echo $currency_block ?>
+			</div>
+			<?php endif; ?>
+			<?php if($store_language = $this->getChildHtml('store_language')): ?>
+			<div class="switcher-language-wrapper hidden-sm hidden-xs">
+				<?php echo $this->getChildHtml('store_language') ?>
+			</div>
+			<?php endif; ?>
+		</div>
+	</div>
+	<?php endif; ?>
+
+	<!-- header content -->
+	<div class="field-inner page-main">
+		<div class="header-content clearfix">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="logo-wrapper <?php echo $logo?"sticky-item":"sticky-item-hidden"  ?>">
+						<?php echo $this->getChildHtml('logo') ?>
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+					<div class="header-left f-right hidden-xs hidden-sm">
+						<?php if($enable_toplinks){ ?>
+						<div class="header-links-wrapper">
+							<?php echo $this->getChildHtml('top_links') ?>
+						</div>
+						<?php } ?>
+						<div class="setting-wrapper">
+							<?php echo $this->getChildHtml('setting_links') ?>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
+					<div class="minicart-warp <?php echo $topcart?"sticky-item":"sticky-item-hidden"  ?>"><?php echo $this->getChildHtml('minicart') ?>
+					</div>
+				</div>
+			</div>
+			<?php if($custom_block = $this->getChildHtml("custom_block")): ?>
+			<div class="row">
+				<div class="customblock-wrapper <?php echo $custom_block?"sticky-item":"sticky-item-hidden"  ?>">
+					<?php echo $custom_block; ?>
+				</div>
+			</div>
+			<?php endif; ?>
+		</div>
+	</div>
+
+	<!-- Menu top -->
+	<div class="field-menutop clearfix <?php echo $menu?"sticky-item":"sticky-item-hidden"  ?>"> 
+		<div class="field-inner page-main">
+			<?php echo $this->getChildHtml('catalog.topnav') ?>
+			<?php if($show_search): ?>
+				<div class="search-wrapper pull-right">
+					<div class="dropdown">
+			            <div class="dropdown-toggle hidden-md hidden-lg" data-toggle="dropdown">
+			                <i class="fa fa-search">&nbsp;</i>
+			            </div>
+			            <div class="dropdown-menu" role="menu">
+			                <?php echo $this->getChildHtml('topSearch') ?>
+			            </div> 
+			        </div>
+				</div>
+			<?php endif; ?>
+		</div>
+	</div>
+
+	<?php if($sticky){ ?>
+	<script type="text/javascript">
+		require([
+			'jquery',
+			'Field_Themesettings/js/theme'
+			], function(){
+				
+				function getScroll () {
+				    var b = document.body;
+				    var e = document.documentElement;
+				    return {
+				        left: parseFloat( window.pageXOffset || b.scrollLeft || e.scrollLeft ),
+				        top: parseFloat( window.pageYOffset || b.scrollTop || e.scrollTop )
+				    };
+				}
+				jQuery(document).ready(function($) {
+					var h = jQuery('.page-header').height();
+					var myHeader = jQuery('.page-header');
+					var hasBreadcrumbs = false;
+					var breadcrumbs = jQuery(".breadcrumbs");
+					if(typeof(breadcrumbs) != "undefined" && breadcrumbs.length > 0) {
+						hasBreadcrumbs = true;
+					}
+					myHeader.data( 'position', myHeader.position() );
+
+					jQuery(window).scroll(function(){
+						var hPos = myHeader.data('position'), scroll = getScroll();
+						var h_px = jQuery("#field-header", ".page-header").outerHeight(true)+"px";
+
+						if ( hPos.top < scroll.top) {
+							jQuery('.page-header').delay(1000).addClass("navbar-fixed-top");
+							jQuery('body').delay(1000).addClass("keep-header");
+							var headerHeight = jQuery('.page-header').height();
+							<?php if($sticky_type == 'specify'){ ?>jQuery(".page-wrapper").css({"padding-top":headerHeight+"px"});<?php } ?>
+							jQuery(".sticky-item-hidden").css({"display":"none"});
+							if(!hasBreadcrumbs) {
+								jQuery("#maincontent").delay(1000).css("margin-top", h_px);
+							}
+						}else{
+							jQuery(".sticky-item-hidden").css({"display":""});
+							jQuery('.page-header').delay(1000).removeClass("navbar-fixed-top");
+							jQuery('body').delay(1000).removeClass("keep-header");
+							jQuery(".page-wrapper").css({"padding-top":""});
+							if(!hasBreadcrumbs) {
+								jQuery("#maincontent").delay(1000).css({"margin-top": ""});
+							}
+						}
+					});
+				});
+			});
+	</script>
+	<?php } ?>
+	<?php echo $this->getChildHtml('field_navigation'); ?>
+</div>

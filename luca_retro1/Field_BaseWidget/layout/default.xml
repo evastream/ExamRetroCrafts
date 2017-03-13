@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Examensarbete - Eva Ström 
+ * @package    Field_BaseWidget
+ * Eva Ström WIE15 (c) 2016  http://www.retrocrafts.se/ http://www.evamedia.se/
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<remove src="Field_BaseWidget::css/owl/owl.carousel.min.css" />
+		<remove src="Field_BaseWidget::css/bootstrap336/bootstrap.min.css" />
+		<remove src="Field_BaseWidget::js/fancybox/jquery.fancybox.css" />
+
+		<remove src="Field_BaseWidget::js/bootstrap336/bootstrap.min.js" />
+		<remove src="Field_BaseWidget::js/fancybox/jquery.fancybox.pack.js" />
+		<remove src="Field_BaseWidget::js/owl/owl.carousel.min.js" />
+	</head>
+	<body>
+		<referenceContainer name="before.body.end">
+			<block class="Magento\Framework\View\Element\Template" name="field.basewidget.common.js" template="Field_BaseWidget::common/js.phtml" />
+		</referenceContainer>
+	</body>
+</page>

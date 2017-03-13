@@ -1,0 +1,93 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+//
+//    Newsletter subscription
+//--------------------------------------
+.block.newsletter {
+    margin-bottom: 0;
+    .block-title{
+        display: none;
+    }
+    .block-content{
+        padding: 0;
+    }
+    .form.subscribe {
+        display: table;
+        width: 100%;
+    }
+    .fieldset {
+        display: table-cell;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+    }
+    .field {
+        margin: 0;
+        .control {
+            padding-top: 0;
+            .lib-icon-font(
+                @icon-envelope,
+                @_icon-font-size: 16px,
+                @_icon-font-line-height: 32px,
+                @_icon-font-color: @form-element-input-placeholder__color,
+                @_icon-font-margin: 0 0 0 8px
+                );
+            &:before {
+                position: absolute;
+                display: none;
+            }
+            display: block;
+        }
+    }
+    input {
+        font-family: @font-body-family;
+        width: 280px;
+        max-width: 100%;
+        height: 43px;
+        border-radius: 3px;
+        float: left;
+        margin-right: 2px;
+        border: 0;
+        color: #555555;
+        background-color: #f9f9f9;
+        font-size: 17px;
+        padding-left: 13px;
+    }
+    .title {
+        display: none;
+    }
+    .label {
+        width: 100%;
+        display: none;
+    }
+    .actions {
+        float: left;
+    }
+    .action.subscribe {
+            background: #90816e;
+            box-shadow: 1px 1px #f3f3f3;
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: "Pathway Gothic One";
+            border-radius: 0;
+            padding: 6px 11px;
+            height: 43px;
+            border-radius: 3px;
+        &:hover, &:focus {
+            background: #eb5f60;
+        }
+    }
+}
+
+}
+

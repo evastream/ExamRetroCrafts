@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/> 
+        <!-- Add local resources -->
+        <css src="bootstrap/css/bootstrap.min.css" />
+        <css src="bootstrap/css/bootstrap-theme.min.css" />
+        <css src="owl.carousel/assets/owl.carousel.css" />
+        <css src="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" src_type="url"/>
+        <css src="//fonts.googleapis.com/css?family=Pathway+Gothic+One" src_type="url"/>
+        <css src="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" src_type="url"/>
+        <css src="css/custom.css" />
+
+        <script src="jquery.js" />
+        <script src="bootstrap/js/bootstrap.min.js" />
+        <script src="owl.carousel/owl.carousel.min.js" />
+    </head>
+</page>

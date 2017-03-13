@@ -1,0 +1,253 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//    Common
+//--------------------------------------
+
+@toolbar-mode-icon-font-size: 16px;
+@toolbar-background: transparent;
+@toolbar-element-background: @color-gray94;
+@pager-action__background: @toolbar-element-background;
+@pager-action__hover__background: darken(@toolbar-element-background, 7%);
+@pager__font-weight: @font-weight__bold;
+
+& when (@media-common = true) {
+
+.page-products .columns {
+    position: relative;
+    z-index: 1;
+}
+
+.toolbar {
+        height: 48px;
+    line-height: 48px;
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    padding: 0 17px 0 20px;
+   
+    &:extend(.abs-add-clearfix all);
+    &-amount {
+        display: block;
+        line-height: @toolbar-mode-icon-font-size+2;
+        padding: 15px 0 0;
+        margin: 0;
+        vertical-align: middle;
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+    }
+    &-products {
+        text-align: center;
+        &:extend(.abs-add-clearfix all);
+        .pages {
+            display: none;
+            .products.wrapper ~ & {
+                display: block;
+            }
+        }
+        .limiter {
+            display: none;
+            .control {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.sorter {
+    padding:0;
+    .products.wrapper ~ .toolbar & {
+        display: none;
+    }
+    &-options {
+        margin: 0 0 0 7px;
+        width: auto;
+    }
+    &-action {
+        vertical-align: top;
+        .lib-icon-font(
+            @icon-arrow-up,
+            @_icon-font-size: 14px,
+            @_icon-font-line-height: 32px,
+            @_icon-font-color: @header-icons-color,
+            @_icon-font-color-hover: @header-icons-color-hover,
+            @_icon-font-text-hide: true
+        );
+        &.sort-desc:before {
+            content: @icon-arrow-down;
+        }
+    }
+}
+
+.modes {
+    display: none;
+}
+
+.limiter {
+    &-options {
+        width: auto;
+        margin: 0 5px 0 7px;
+    }
+    &-label {
+        font-weight: 400;
+    }
+    .page-products .toolbar & {
+        display: none;
+    }
+}
+
+}
+
+//
+//  Mobile
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .page-products .columns {
+        position: relative;
+        z-index: 1;
+        padding-top: 0;
+    }
+    .toolbar {
+        .products.wrapper ~ & .pages {
+            float: left;
+          
+    line-height: 1;
+    padding-top: 8px;
+        }
+        &-amount {
+            float: left;
+        }
+    }
+    .sorter {
+        float: right;
+    }
+    .modes {
+        float: left;
+        display: inline-block;
+        margin-right: @indent__s;
+        padding-top:12px;
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+        &-label {
+            &:extend(.abs-visually-hidden-desktop-s all);
+        }
+        &-mode {
+            .lib-css(color, @theme-color-default);
+            float: left;
+            font-weight: @font-weight__regular;
+            line-height: 1;
+            text-align: center;
+            margin-right: @indent__s;
+            &:not(.active):hover {
+                //background: darken(@toolbar-element-background, 7%);
+                .lib-css(color, @theme-color-default);
+            }
+            
+            &.active {
+                .lib-css(color, @theme-color-default);
+            }
+            .lib-icon-font(
+                @icon-grid,
+                @_icon-font-size: @toolbar-mode-icon-font-size,
+                @_icon-font-text-hide: true
+            );
+        }
+    }
+    .mode-list {
+        .lib-icon-font-symbol(@icon-list);
+    }
+    .limiter {
+        float: right;
+        .products.wrapper ~ .toolbar & {
+            display: block;
+        }
+    }
+}
+.toolbar .pages .action.next:before{
+        content: "";
+        font-size: 14px;
+        font-family:FontAwesome;
+}
+.toolbar .pages .action.previous:before{
+        content:"";
+        font-family:FontAwesome;
+        font-size: 14px;
+}
+.toolbar-products .mode-grid::before {
+    content: "";
+    font-family: FontAwesome;
+    font-size: 24px;
+    }
+.toolbar-products .mode-list::before {
+    content: "";
+    font-family: FontAwesome;
+    font-size: 24px;
+}
+.page-products .category-image{
+    margin-bottom:30px;
+}
+
+.toolbar-products .pages strong.page{
+        width: 30px;
+    height: 30px;
+    padding: 0!important;
+    font-weight: normal;
+    border: 1px solid @theme-color-default;
+    background: @theme-color-default;
+    color:#fff;
+}
+.toolbar-products .pages{
+
+            .action.previous{
+                margin-right:0;
+                &:before{
+                    font-size:12px;
+                }
+
+            }
+            .action.next{
+                    margin-left:0;
+                }
+             .item{
+                    margin-right:5px;
+                    float:left;
+                    a{
+                    font-size:13px;
+                    }
+
+                &:not(.current) a{
+                       width: 30px;
+                        height: 30px;
+                        padding: 0!important;
+                        font-weight: normal;
+                        border: 1px solid @theme-color-primary;
+                        background: @theme-color-primary;
+                        color:#fff;
+
+                    
+
+                  &:hover{
+                      background: @theme-color-default;
+                      border-color:@theme-color-default;
+                       color:#fff;
+                       &:before{
+                       color:#fff;
+                       }
+                  }  
+                }
+                &.pages-item-next a,&.pages-item-previous  a{
+                        width: 30px;
+                    height: 30px;
+                    padding: 0!important;
+                    font-weight: normal;
+                    border: 1px solid #ddd;
+                    background: #fff;
+                }
+
+                }
+}
