@@ -199,6 +199,15 @@ if($layout_type == 'owl_carousel'){
 								<?php } ?>
 								<?php if(isset($networks['pinterest'])){ ?>
 								<li><a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=<?php echo $postUrl ?>&media=<?php echo $imageHelper->resizeImage($_post->getThumbnail(), $image_width, $image_height); ?>&description=<?php echo $_post->getTitle(); ?>"></a></li>
+								<?php if(isset($networks['instagram'])){ ?>
+								<li><div>
+									<a href="http://instagram.com/share" class="instagram-share-button"
+									data-url="<?php echo $postUrl ?>"
+									data-via="instagramapi"
+									data-text="Checking out this page about Insta Buttons"
+									data-related="anywhere:The Javascript API"
+									data-count="vertical"><i class="blog-icon instagram"></i></a>
+								</div></li>
 								<?php } ?>
 							</ul>
 						</div>
@@ -302,6 +311,9 @@ if($layout_type == 'owl_carousel'){
 			<?php } ?>
 			<?php if(isset($networks['pinterest'])){ ?>
 			<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+			<?php } ?>
+		<?php if(isset($networks['instagram'])){ ?>
+			<script type="text/javascript" async defer src="//assets.instagram.com/js/insta.js"></script>
 			<?php } ?>
 			<?php } ?>
 		</div>

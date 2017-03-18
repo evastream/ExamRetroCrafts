@@ -1,4 +1,5 @@
 <?php
+/* lagt till SWIPE mellan angle left och angle right >SWIPE< */
 $_productCollection = [];
 $helper = $this->helper("Field\Megamenu\Helper\Data");
 $imgHelper = $this->helper("Field\Megamenu\Helper\Image");
@@ -69,7 +70,7 @@ $blockId = time().rand();
 				
 				<?php if($this->getConfig("nav")){ ?>
 				<div class="owl-nav">
-					<a class="prev<?php echo $blockId ?>"><i class="fa fa-angle-left"></i></a>
+					<a class="prev<?php echo $blockId ?>"><i class="fa fa-angle-left">SWIPE</i></a>
 					<a class="next<?php echo $blockId ?>"><i class="fa fa-angle-right"></i></a>
 				</div>
 				<?php } ?>

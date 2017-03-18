@@ -156,6 +156,9 @@ $_post->setData('categories', $_post->getPostCategories());
 				<?php if(isset($networks['pinterest'])){ ?>
 				<li><a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=<?php echo $postUrl ?>&media=<?php echo $imageHelper->resizeImage($_post->getImage(), $image_width, $image_height) ?>&description=<?php echo $_post->getTitle(); ?>"></a></li>
 				<?php } ?>
+				<?php if(isset($networks['instagram'])){ ?>
+				<li><a data-pin-do="buttonPin" href="https://www.instagram.com/pin/create/button/?url=<?php echo $postUrl ?>&media=<?php echo $imageHelper->resizeImage($_post->getImage(), $image_width, $image_height) ?>&description=<?php echo $_post->getTitle(); ?>"></a></li>
+				<?php } ?>
 			</ul>
 		</div>
 		<?php } ?>
@@ -183,6 +186,9 @@ $_post->setData('categories', $_post->getPostCategories());
 <?php } ?>
 <?php if(isset($networks['pinterest'])){ ?>
 <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<?php } ?>
+<?php if(isset($networks['intagram'])){ ?>
+<script type="text/javascript" async defer src="//assets.instagram.com/js/pinit.js"></script>
 <?php } ?>
 <?php } ?>
 <?php echo $this->getChildHtml("post_related"); ?>
