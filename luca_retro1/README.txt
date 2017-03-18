@@ -17,4 +17,6 @@ Databas mySQL Workbench
 Databasen har 'kraschat' en gång. Jag lyckades rädda och återställa den lokalt i MySQL Workbench. 
 RetroCrafts som E-shop är tänkt att fungera fullt ut som en E-handel on-line. 
 
+Lagt till Instagram samt >SWIPE> mellan pilarna i de mindre karusellerna på indexsidan
+
 Text kompletteras här efterhand arbetet fortgår...
