@@ -17,6 +17,9 @@ Databas mySQL Workbench
 Databasen har 'kraschat' en gång. Jag lyckades rädda och återställa den lokalt i MySQL Workbench. 
 RetroCrafts som E-shop är tänkt att fungera fullt ut som en E-handel on-line. 
 
-Lagt till Instagram samt >SWIPE> mellan pilarna i de mindre karusellerna på indexsidan
+Lagt till Instagram samt >SWIPE> mellan pilarna i de mindre karusellerna på indexsidan. Släpper det så långe.
+20 mars. Får inte '>Swipe< att funka. Lägger fokus på produktsidor, checkout och payment nu. 
+
+Har lagt till en fil för css progressbar. Det finns en sådan inbyggt i Magentos-tema. Jag ville ändå få koll på hur den är uppbyggd. Jag kommer dock att använda den redan inställda funktionen. 
 
 Text kompletteras här efterhand arbetet fortgår...
