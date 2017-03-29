@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Themesettings
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+	<menu>
+		<add id="Field_Themesettings::theme" title="Field Theme Settings" module="Field_Themesettings" sortOrder="10" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::theme_settings" title="Configuration" module="Field_Themesettings" sortOrder="20" parent="Field_Themesettings::theme" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::general_settings" title="General" module="Field_Themesettings" sortOrder="30" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_general" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::header_settings" title="Header" module="Field_Themesettings" sortOrder="40" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_header" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::footer_settings" title="Footer" module="Field_Themesettings" sortOrder="50" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_footer" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::productdesign" title="Product Listing" module="Field_Themesettings" sortOrder="52" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_product_listing" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::category_page_settings" title="Category Page" module="Field_Themesettings" sortOrder="60" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_category_page" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::product_page_settings" title="Product Page" module="Field_Themesettings" sortOrder="70" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_product_page" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::contact_page_settings" title="Contact Page" module="Field_Themesettings" sortOrder="80" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_contact_page" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::popup_newsletter" title="Popup Newsletter" module="Field_Themesettings" sortOrder="85" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_popup_newsletter" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::cart_page_setting" title="Cart Page" module="Field_Themesettings" sortOrder="90" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_cart_page" resource="Field_Themesettings::configuration"/>
+		<add id="Field_Themesettings::customization_settings" title="Customization" module="Field_Themesettings" sortOrder="95" parent="Field_Themesettings::theme_settings" action="adminhtml/system_config/edit/section/field_themesettings_customization" resource="Field_Themesettings::configuration"/>
+	</menu>
+</config>

@@ -1,0 +1,23 @@
+<?php 
+$_fieldData = $this->helper('Field\Themesettings\Helper\Data');
+$_field = $this->helper('Field\Themesettings\Helper\Theme');
+if($_field->getFooterCfg("footer_top_settings/enable_footer_center")): 
+?>
+<div class="field-inner">
+<?php
+$staticblock = $_field->getFooterCfg("footer_center_settings/staticblock");
+$custom_html = $_field->getFooterCfg("footer_center_settings/custom_html");
+if($_field->getGeneralCfg("general_settings/paneltool")){
+    $blockId_tmp = $this->getRequest()->getParam('footer_layout', $this->getRequest()->getParam('footer', false));
+    if($blockId_tmp) {
+        $staticblock = trim($blockId_tmp);
+    }
+}
+if($staticblock && is_numeric($staticblock)){
+	echo $this->getStaticBlock($staticblock);
+}elseif($custom_html!=''){
+	echo $_fieldData->filter($custom_html);
+}
+?>
+</div>
+<?php endif; ?>

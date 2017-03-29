@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Brand
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="field_base_googlemap" class="Field\BaseWidget\Block\Widget\Googlemap">
+		<label translate="true">Field Base: Google Map</label>
+		<description translate="true">Create A Google Map</description>
+		<parameters>
+			<parameter name="map_API" xsi:type="text" visible="true">
+				<label translate="true">Google Maps JavaScript API</label>
+				<description translate="true"><![CDATA[You can get it in: <a href="https://console.developers.google.com/apis/">https://console.developers.google.com/apis/</a>]]></description>
+			</parameter>
+			<parameter name="latitude" xsi:type="text" visible="true">
+				<label translate="true">Latitude</label>
+				<description translate="true">Input Latitude. For example: 21.010904</description>
+			</parameter>
+
+			<parameter name="longitude" xsi:type="text" visible="true">
+				<label translate="true">Longitude</label>
+				<description translate="true">Input Longitude. For example: 105.787736</description>
+			</parameter>
+
+			<parameter name="zoom" xsi:type="text"  visible="true">
+				<label translate="true">Zoom</label>
+				<description translate="true">Input Zoom Value from 1-16</description>
+			</parameter>
+
+			<parameter name="width" xsi:type="text"  visible="true">
+				<label translate="true">Width</label>
+				<description translate="true">Input Map Width value. For example: 250px or 100%</description>
+			</parameter>
+
+			<parameter name="height" xsi:type="text"  visible="true">
+				<label translate="true">Height</label>
+				<description translate="true">Input Map Height value. For example: 200px or 100%</description>
+			</parameter>
+
+			<parameter name="description" xsi:type="text" visible="true">
+                <label translate="true">Description</label>
+            </parameter>
+
+            <parameter name="maker_icon" xsi:type="conditions" visible="true" class="Field\BaseWidget\Block\Adminhtml\Widget\Form\Field\Mediachooser">
+				<label translate="true">Maker Icon</label>
+				<description translate="true"><![CDATA[Input maker icon url. 
+					Or input image name with path.<br/>Example: <strong>image_name.jpg(png|gif|jpeg|svg)</strong> or <strong>subfolder/image_name.jpg(png|gif|jpeg|svg)</strong>.The "subfolder" is child folder in <strong>your_webroot_folder/pub/media/</strong>]]></description>
+			</parameter>
+
+		</parameters>
+	</widget>
+</widgets>

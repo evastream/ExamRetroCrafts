@@ -1,7 +1,7 @@
 Eva Ström - WIE15-Medieinstitutet - Examensuppgift
 RetroCrafts ...webbadress kommer inom kort... är en E-handel byggd i Magento 2.O med utgångspunkt i temat Luca. 
 I Magento är kodstruktur och filhantering redan skapad. 
-Jag har valt Magento 2.0 för att det är ett intressant och komplext system att arbeta i.
+Jag har valt Magento 2.0 för att det är ett intressant och komplext system att arbeta i. Det har ett bra kundhanteringssystem 
 
 Mappar, filer och Child-tema
 Mappstrukturen är enligt följande app/design/frontend/fieldthemes/luca_retro1/retrocrafts 

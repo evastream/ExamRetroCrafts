@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Megamenu
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+	<menu>
+		<add id="Field_Megamenu::menu" title="Field Megamenu" module="Field_Megamenu" sortOrder="10" resource="Field_Megamenu::menu"/>
+
+		<add id="Field_Megamenu::menu_head_manage" title="Menus" module="Field_Megamenu" sortOrder="10" parent="Field_Megamenu::menu" resource="Field_Megamenu::menu"/>
+
+		<add id="Field_Megamenu::menu_new" title="Add New Menu" module="Field_Megamenu" sortOrder="10" parent="Field_Megamenu::menu_head_manage" action="fieldmegamenu/menu/new" resource="Field_Megamenu::menu"/>
+
+		<add id="Field_Megamenu::menu_manage" title="Menu Management" module="Field_Megamenu" sortOrder="20" parent="Field_Megamenu::menu_head_manage" action="fieldmegamenu/menu/index" resource="Field_Megamenu::menu"/>
+	</menu>
+</config>

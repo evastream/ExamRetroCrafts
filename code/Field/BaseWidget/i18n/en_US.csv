@@ -1,0 +1,15 @@
+All,All
+"Widget Title","Widget Title"
+"This tile will be showed as header of widget block. Empty to disable","This tile will be showed as header of widget block. Empty to disable"
+"Addition Class","Addition Class"
+"This class is used to make owner style for the widget.","This class is used to make owner style for the widget."
+"Text on the button","Text on the button"
+"URL (link)","URL (link)"
+"Button Link.","Button Link."
+"Button Type","Button Type"
+"Select types suitable for your button.","Select types suitable for your button."
+"Button Icon","Button Icon"
+"Button Size","Button Size"
+"Select size suitable for your button.","Select size suitable for your button."
+Extra class name,Extra class name
+"If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.","If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file."

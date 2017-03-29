@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Setup
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+	<menu>
+		<add id="Field_Setup::theme" title="Field Setup" module="Field_Setup" sortOrder="10" resource="Field_Setup::configuration"/>
+		<add id="Field_Setup::tools_section" title="Tools" module="Field_Setup" sortOrder="100" parent="Field_Setup::theme" resource="Field_Setup::configuration"/>
+		<add id="Field_Setup::import" title="Import" module="Field_Setup" sortOrder="110" parent="Field_Setup::tools_section" action="fieldsetup/import/index" resource="Field_Setup::configuration"/>
+		<add id="Field_Setup::export" title="Export" module="Field_Setup" sortOrder="120" parent="Field_Setup::tools_section" action="fieldsetup/export/index" resource="Field_Setup::configuration"/>
+	</menu>
+</config>

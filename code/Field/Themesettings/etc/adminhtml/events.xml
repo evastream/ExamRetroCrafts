@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Themesettings
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+	<event name="admin_system_config_changed_section_field_themesettings_general">
+		<observer name="field_themesettings_general" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_header">
+		<observer name="field_themesettings_header" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_footer">
+		<observer name="field_themesettings_footer" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_page">
+		<observer name="field_themesettings_page" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_product_listing">
+		<observer name="field_themesettings_product_listing" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_category_page">
+		<observer name="field_themesettings_category_page" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_product_page">
+		<observer name="field_themesettings_product_page" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_contact_page">
+		<observer name="field_themesettings_contact_page" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_popup_newsletter">
+		<observer name="field_themesettings_popup_newsletter" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_cart_page">
+		<observer name="field_themesettings_cart_page" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+	<event name="admin_system_config_changed_section_field_themesettings_customization">
+		<observer name="field_themesettings_customization" instance="Field\Themesettings\Observer\FieldThemesettingsObserver"/>
+	</event>
+</config>

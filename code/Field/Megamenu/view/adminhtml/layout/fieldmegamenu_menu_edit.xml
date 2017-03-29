@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Megamenu
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+	<update handle="editor"/>
+    <head>
+        <css src="Field_Megamenu::css/styles.css" />
+        <css src="Field_Megamenu::css/font-awesome.min.css" />
+        <script src="jquery.js" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Field\Megamenu\Block\Adminhtml\Menu\Edit" name="menu_form_edit"/>
+        </referenceContainer>
+        <referenceContainer name="js">
+            <block class="Magento\Framework\View\Element\Template" template="Field_Megamenu::wysiwyg/js.phtml" name="megamenu.wysiwyg.js"/>
+        </referenceContainer>
+    </body>
+</page>

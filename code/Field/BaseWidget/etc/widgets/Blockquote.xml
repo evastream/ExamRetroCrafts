@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Brand
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="field_base_blockquote" class="Field\BaseWidget\Block\Widget\Blockquote">
+		<label translate="true">Field Base: Blockquote</label>
+		<description translate="true">Generate bootstrap blockquote element</description>
+		<parameters>
+			<parameter name="addition_cls" xsi:type="text"  visible="true">
+				<label translate="true">Addition Class</label>
+				<description translate="true">This class is used to make owner style for the widget.</description>
+			</parameter>
+			<parameter name="html" xsi:type="conditions" visible="true" class="Field\BaseWidget\Block\Adminhtml\Widget\Form\Field\WysiwygEditor">
+				<label translate="true">Content</label>
+				<description translate="true">Input html content.</description>
+			</parameter>
+			<parameter name="author" xsi:type="text" visible="true">
+				<label translate="true">Author name</label>
+				<description translate="true">Input the author. Empty to disable</description>
+			</parameter>
+			<parameter name="cite" xsi:type="text" visible="true">
+				<label translate="true">Cite text</label>
+				<description translate="true">Input the cite text. Empty to disable</description>
+			</parameter>
+		</parameters>
+	</widget>
+</widgets>

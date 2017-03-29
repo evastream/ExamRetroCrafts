@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Brand
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Field_BaseWidget::css/bootstrap336/bootstrap.min.css" />
+		<css src="Field_BaseWidget::css/font-awesome-4.5.0/css/font-awesome.min.css" />
+		<css src="Field_BaseWidget::css/animate.min.css" />
+		<script src="jquery.js" />
+		<script src="jquery/jquery-ui-1.9.2.js" />
+		<script src="Field_BaseWidget::js/jquery/jquery.browser.js"/>
+		<script src="Field_BaseWidget::js/jquery/jquery.colorpicker.js"/>
+	</head>
+	<body>
+		<referenceContainer name="js">
+			<block class="Field\BaseWidget\Block\Adminhtml\Html" template="Field_BaseWidget::pagebuilder/js.phtml" name="basewidget.pagebuilder.js"/>
+		</referenceContainer>
+	</body>
+</page>

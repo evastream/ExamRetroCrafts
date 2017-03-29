@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_Megamenu
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Field_Megamenu::css/styles.css" />
+		<css src="Field_Megamenu::css/owl.carousel.min.css" />
+		<css src="Field_Megamenu::css/font-awesome.min.css" />
+		<css src="Field_Megamenu::css/bootstrap.min.css" />
+	</head>
+	<body>
+		<!-- <referenceBlock name="catalog.topnav" remove="true"/> -->
+		<!-- <referenceBlock name="navigation.sections">
+			<block class="Field\Megamenu\Block\Menu" name="menu.top" as="menu_top" template="Field_Megamenu::menu_top.phtml">
+				<action method="setData">
+					<argument name="name" xsi:type="string">alias</argument>
+					<argument name="value" xsi:type="string">menu-top</argument>
+				</action>
+				<action method="setData">
+					<argument name="name" xsi:type="string">layout</argument>
+					<argument name="value" xsi:type="string">horizontal</argument>
+				</action>
+			</block>
+		</referenceBlock> -->
+		<!-- <referenceContainer name="content">
+			<block class="Field\Megamenu\Block\Menu" name="top.menu" remove="true" />
+		</referenceContainer> -->
+		<referenceContainer name="page.top">
+            <block class="Field\Megamenu\Block\Menu" name="catalog.topnav" template="Field_Megamenu::menu_top.phtml" ttl="3600">
+				<action method="setData">
+					<argument name="name" xsi:type="string">alias</argument>
+					<argument name="value" xsi:type="string">menu-top</argument>
+				</action>
+				<action method="setData">
+					<argument name="name" xsi:type="string">layout</argument>
+					<argument name="value" xsi:type="string">horizontal</argument>
+				</action>
+			</block>
+        </referenceContainer>
+	</body>
+</page>

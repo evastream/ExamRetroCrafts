@@ -1,0 +1,9 @@
+<?php
+$field = $this->helper("Field\Themesettings\Helper\Theme");
+$scrolltop = $field->getFooterCfg("general_settings/enable_scrolltop");
+?>
+<?php if($scrolltop){ ?>
+    <a class="toTop" href="javascript:void(0)">
+        <i class="fa fa-angle-up"></i>
+    </a>
+<?php } ?>

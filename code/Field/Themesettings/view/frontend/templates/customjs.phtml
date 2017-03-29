@@ -1,0 +1,9 @@
+<?php
+$_field = $this->helper('Field\Themesettings\Helper\Theme');
+$customJs = trim($_field->getCustomizationCfg('custom_code/custom_js'));
+?>
+<script type="text/javascript">
+	require(["jquery"],function(){
+		<?php echo $customJs; ?>
+	});	
+</script>

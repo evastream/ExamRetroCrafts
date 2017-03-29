@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_PageBuilder
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+	<menu>
+		
+		<add id="Field_PageBuilder::pagebuilder" title="Field PageBuilder" module="Field_PageBuilder" sortOrder="10" resource="Field_PageBuilder::block"/>
+
+		<!-- Links manage block builder profile -->
+		<add id="Field_PageBuilder::block_head_manage" title="Blocks Builder" module="Field_PageBuilder" sortOrder="10" parent="Field_PageBuilder::pagebuilder" resource="Field_PageBuilder::block"/>
+
+		<add id="Field_PageBuilder::block_new" title="Add New Block Profile" module="Field_PageBuilder" sortOrder="10" parent="Field_PageBuilder::block_head_manage" action="fieldpagebuilder/blockbuilder/new" resource="Field_PageBuilder::block_new"/>
+
+		<add id="Field_PageBuilder::block_manage" title="Manage Block Profile" module="Field_PageBuilder" sortOrder="20" parent="Field_PageBuilder::block_head_manage" action="fieldpagebuilder/blockbuilder/index" resource="Field_PageBuilder::block"/>
+
+		<!-- Links manage page builder profile -->
+
+		<add id="Field_PageBuilder::page_head_manage" title="Pages Builder" module="Field_PageBuilder" sortOrder="30" parent="Field_PageBuilder::pagebuilder" resource="Field_PageBuilder::page"/>
+
+		<add id="Field_PageBuilder::page_new" title="Add New Page Profile" module="Field_PageBuilder" sortOrder="40" parent="Field_PageBuilder::page_head_manage" action="fieldpagebuilder/pagebuilder/new" resource="Field_PageBuilder::page_new"/>
+
+		<add id="Field_PageBuilder::page_manage" title="Manage Page Profile" module="Field_PageBuilder" sortOrder="50" parent="Field_PageBuilder::page_head_manage" action="fieldpagebuilder/pagebuilder/index" resource="Field_PageBuilder::page"/>
+
+		<add id="Field_PageBuilder::page_configuration" title="Configuration" module="Field_PageBuilder" sortOrder="60"
+            parent="Field_PageBuilder::page_head_manage" action="adminhtml/system_config/edit/section/fieldpagebuilder" resource="Field_PageBuilder::config_pagebuilder"/>
+
+		<!-- Links Enable Live Css Tool -->
+   
+		<add id="Field_PageBuilder::livecss_head" title="Live Css Tool" module="Field_PageBuilder" sortOrder="30" parent="Field_PageBuilder::pagebuilder" resource="Field_PageBuilder::config_livecss"/>
+
+		<add id="Field_PageBuilder::livecss_configuration" title="Configuration" module="Field_PageBuilder" sortOrder="60"
+            parent="Field_PageBuilder::livecss_head" action="adminhtml/system_config/edit/section/fieldlivecss" resource="Field_PageBuilder::config_livecss"/>
+		
+
+	</menu>
+</config>

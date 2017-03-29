@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fieldthemes
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Fieldthemes.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.fieldthemes.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Fieldthemes
+ * @package    Field_BlockBuilder
+ * @copyright  Copyright (c) 2014 Fieldthemes (http://www.fieldthemes.com/)
+ * @license    http://www.fieldthemes.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+	<menu>
+		
+		<!--
+		<add id="Field_BaseWidget::basewidget" title="Field Base Widget" module="Field_BaseWidget" sortOrder="10" resource="Field_BaseWidget::base"/>-->
+
+		<!-- Links manage base widget -->
+		<add id="Field_BaseWidget::block_head_manage" title="Base Widgets" module="Field_BaseWidget" sortOrder="100" parent="Field_PageBuilder::pagebuilder" resource="Field_BaseWidget::base"/>
+
+		<add id="Field_BaseWidget::basewidget_manage" title="Files Manager" module="Field_BaseWidget" sortOrder="110" parent="Field_BaseWidget::block_head_manage" action="fieldbasewidget/basewidget/imagemanager" resource="Field_BaseWidget::baseconnector"/>
+
+		<add id="Field_BaseWidget::basewidget_configuration" title="Configuration" module="Field_BaseWidget" sortOrder="120"
+            parent="Field_BaseWidget::block_head_manage" action="adminhtml/system_config/edit/section/fieldbasewidget" resource="Field_BaseWidget::config_basewidget"/>
+
+
+	</menu>
+</config>
