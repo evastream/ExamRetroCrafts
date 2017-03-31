@@ -25,4 +25,13 @@ Har lagt till en fil för css progressbar. Det finns en sådan inbyggt i Magento
 29 mars Har lagt in Sandbox konton för PayPal och strax ett kommande för Klarna. De läggs i Checkout. 
 För PayPal finns det redan en inbyggd funktion och modul i Magento2. Paypal kopplas på med en API nyckel. Jag har ändå velat titta på vad en sådan kod kan innehålla och lagt upp dessa mappar och filer är de utgår från code/Magento/Paypal...+ mapp och kodstruktur. För Klarna modul har jag varit i kontakt med Nordic Web Team. De verkar veta lite mer om Klarna-anpassning för Magento2. Klarna och flera som jag har talat med verkar INTE gilla Magento2. 
 
+Upptäckt en (av säkert många buggar i Magento2) Logotype i Transactional E-mails fungerar inte att ladda upp. 
+Rekommenderad åtgärd: create di.xml into you custom module
+add <preference for="Magento\Theme\Model\Design\Backend\Logo" type="Vendor\YouModuleName\Model\Design\Backend\Logo"/>
+create the file Vendor\YouModuleName\Model\Design\Backend\Logo.php
+replace the const UPLOAD_DIR = 'logo'; with const UPLOAD_DIR = 'email/logo';
+
+Trots åtgärden ovan får jag det inte att fungera. 
+
+
 Text kompletteras här efterhand arbetet fortgår...
