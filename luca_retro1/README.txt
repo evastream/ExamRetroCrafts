@@ -33,5 +33,7 @@ replace the const UPLOAD_DIR = 'logo'; with const UPLOAD_DIR = 'email/logo';
 
 Trots åtgärden ovan får jag det inte att fungera. 
 
+4 april RetroCrafts är nu äntligen (efter några dagars mekande) SSL-certifierad och har https:// istället för http:// certifikatet ligger hos COMODO
+
 
 Text kompletteras här efterhand arbetet fortgår...
